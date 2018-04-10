@@ -23,7 +23,7 @@ int main () {
 
      cout << endl;
      }
-    **get_Matrix(2, 1);
+    get_Matrix(2, 1);
 
    return 0;
 }
@@ -74,7 +74,6 @@ double **get_Matrix(int M, int N){
     }
   cout << "Matriz ingresada" << endl;  
   for(i=0;i<M;i++){
-         mat[i] = new double[N];
          for(j=0;j<N;j++){
           cout << mat[i][j] << " ";
          }
