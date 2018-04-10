@@ -49,7 +49,15 @@ int main () {
     double **B = get_Matrix(Mb, Nb);
    
     double **sol = matrix_product(Ma,Na, A, Mb,Nb,B);
-
+    cout << " Producto Matricial " << endl;
+    int i;
+    int j;
+     for(i=0;i<Ma;i++){
+           for(j=0;j<Nb;j++){
+           cout << sol[i][j] << " ";
+            }
+    cout << endl;
+    }
 
    return 0;
 }
