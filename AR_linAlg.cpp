@@ -2,7 +2,7 @@
 using namespace std;
 
 double **matrix_product(int Ma, int Na, double **mata, int Mb, int Nb, double **matb);
-double get_Matrix();
+double **get_Matrix(int M, int N);
 
 int main () {
     //Esto es un vector de 10 comp
@@ -23,7 +23,7 @@ int main () {
 
      cout << endl;
      }
-    get_Matrix();
+    **get_Matrix(2, 1);
 
    return 0;
 }
@@ -51,11 +51,11 @@ double **matrix_product(int Ma, int Na, double **mata, int Mb, int Nb, double **
                mat[i][j] = s;
          }
 
-     cout << endl;
      }
 return mat;
 }
 double **get_Matrix(int M, int N){
+      double el;
      //Elementos
      double **mat = new double*[M];
      int i;
@@ -67,11 +67,20 @@ double **get_Matrix(int M, int N){
     for(i=0;i<M;i++){
          mat[i] = new double[N];
          for(j=0;j<N;j++){
+          cout << "Ingresar elemento de matriz en fila" << i << "columna" << j << endl;
           cin >> el;
           mat[i][j] = el;
          }
     }
-     cin >> el;
+  cout << "Matriz ingresada" << endl;  
+  for(i=0;i<M;i++){
+         mat[i] = new double[N];
+         for(j=0;j<N;j++){
+          cout << mat[i][j] << " ";
+         }
+    cout << endl;
+    }
+return mat;
 }
      
 
