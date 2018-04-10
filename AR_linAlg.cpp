@@ -23,6 +23,7 @@ int main () {
 
      cout << endl;
      }
+    get_Matrix();
 
    return 0;
 }
@@ -54,10 +55,23 @@ double **matrix_product(int Ma, int Na, double **mata, int Mb, int Nb, double **
      }
 return mat;
 }
-double get_Matrix(){
-     cout << "Ingrese su numero " << endl;
-     double elemento;
-     cin >> elemento;
+double **get_Matrix(int M, int N){
+     //Elementos
+     double **mat = new double*[M];
+     int i;
+     for(i=0;i<M;i++){
+         mat[i] = new double[N];
+     }
+    //llenado
+    int j;
+    for(i=0;i<M;i++){
+         mat[i] = new double[N];
+         for(j=0;j<N;j++){
+          cin >> el;
+          mat[i][j] = el;
+         }
+    }
+     cin >> el;
 }
      
 
