@@ -5,6 +5,8 @@ double **matrix_product(int Ma, int Na, double **mata, int Mb, int Nb, double **
 double **get_Matrix(int M, int N);
 
 int main () {
+
+    /*
     //Esto es un vector de 10 comp
     double *a = new double[10];
     //matriz
@@ -23,7 +25,31 @@ int main () {
 
      cout << endl;
      }
-    get_Matrix(2, 1);
+    */
+
+    double Ma;
+    double Mb;
+    double Na;
+    double Nb;
+    cout << "Ingresar M de matriz a " << endl;
+    cin >> Ma;
+    cout << "Ingresar N de matriz a " << endl;
+    cin >> Na;
+    cout << "Ingresar M de matriz b " << endl;
+    cin >> Mb;
+    cout << "Ingresar N de matriz b " << endl;
+    cin >> Nb;
+    if(Mb != Na){
+    cout << " Dimensiones de matrices no permiten producto matricial " << endl;
+    return 0;
+    }
+    cout << " Ingresar matriz a " << endl;
+    double **A = get_Matrix(Ma, Na);
+    cout << " Ingresar matriz b " << endl;
+    double **B = get_Matrix(Mb, Nb);
+   
+    double **sol = matrix_product(Ma,Na, A, Mb,Nb,B);
+
 
    return 0;
 }
@@ -67,7 +93,7 @@ double **get_Matrix(int M, int N){
     for(i=0;i<M;i++){
          mat[i] = new double[N];
          for(j=0;j<N;j++){
-          cout << "Ingresar elemento de matriz en fila" << i << "columna" << j << endl;
+          cout << "Ingresar elemento de matriz en fila " << i << "columna " << j << endl;
           cin >> el;
           mat[i][j] = el;
          }
